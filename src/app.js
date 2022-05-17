@@ -5,6 +5,9 @@ const path = require('path');
 const hbs = require('hbs')
 const forecast = require("../utils/forecast.js");
 
+//port provided by heroku
+const port = process.env.PORT || 3000;
+
 // creating paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
 const pathToView = path.join(__dirname, "../views")
@@ -83,6 +86,6 @@ app.get("*", (req, res) => {
 })
 
 //to listen to the port in the browser
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is up on port 3000");
 });

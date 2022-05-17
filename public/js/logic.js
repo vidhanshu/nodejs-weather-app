@@ -6,7 +6,7 @@ const statusImg = document.querySelector(".status-img");
 const someInfo = document.querySelector(".some-info");
 
 const getWeather = (address = "boston", callback) => {
-    fetch(`http://localhost:3000/weather?address=${encodeURIComponent(address)}`).then((response) => {
+    fetch(`/weather?address=${encodeURIComponent(address)}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 callback("Please provide valid address!", undefined);
