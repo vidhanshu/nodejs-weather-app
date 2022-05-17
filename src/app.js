@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
     res.render('index', {
         name: "vidhanshu",
         title: "Home page for weather app",
+        data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })
 
@@ -30,13 +31,16 @@ app.get("/about", (req, res) => {
     res.render('about', {
         name: "vidhanshu",
         title: "About page for weather app",
+        portfolio: "https://vidhanshu-portfolio.vercel.app/",
+        data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })
 
 app.get("/help", (req, res) => {
     res.render("help", {
         message: "Help page for weather app",
-        name: "vidhanshu"
+        name: "vidhanshu",
+        data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })
 
@@ -46,6 +50,7 @@ app.get("/weather", (req, res) => {
             temp: "23degC",
             title: "Weather page for weather app",
             name: "vidhanshu",
+            data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
         })
     }
 
@@ -65,6 +70,7 @@ app.get("/help/*", (req, res) => {
     res.render('404', {
         message: "Article not found",
         name: "vidhanshu",
+        data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })
 
@@ -72,6 +78,7 @@ app.get("/help/*", (req, res) => {
 app.get("*", (req, res) => {
     res.render('404', {
         message: "Page named Not found",
+        data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })
 

@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Roboto:wght@300;400;500;700&family=Varela+Round&display=swap');
+
 body {
-    height: 100vh;
+    min-height:100vh ;
     display: flex;
     flex-direction: column;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .website-container {
     flex-grow: 1;
     padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    min-height: 400px;
 }
-.form{
+
+.form {
     margin: 50px 0px;
 }
 
@@ -25,12 +32,38 @@ button {
     font-weight: 600;
 }
 
-.status-img{
+.status-img {
     width: 100px;
 }
 
-.response{
-   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-   padding: 10px 20px;
-   border-radius: 3px;
+.response {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.demo {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.title {
+    background-color: rgb(233, 241, 233);
+    padding: 10px;
+    margin: 10px 0px;
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    color: rgb(5, 65, 5);
+    border-radius: 3px;
+}
+
+#highlight {
+    color: "red";
+}
+
+@media (max-width: 450px) {
+    .demo {
+        width: 90vw;
+        margin: 0 auto;
+    }
 }
