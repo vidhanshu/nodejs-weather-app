@@ -1,0 +1,65 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(0, 140, 255);
+        padding: 5px 20px;
+    }
+
+    .header h1 {
+        color: white;
+    }
+
+    .header-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 250px;
+    }
+
+    .header-links li {
+        list-style: none;
+        transition: .3s all ease-in;
+    }
+
+    .header-links li:hover {
+        transform: translateY(-3px) scale(1.1);
+    }
+
+    .header-links li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    @media (max-width: 400px) {
+        nav {
+            flex-direction: column;
+        }
+
+        .header-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-width: 300px;
+        }
+    }
+</style>
+
+<div class="header">
+    <nav>
+        <h1>Vweather</h1>
+        <ul class="header-links">
+            <li><a href="/">home</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="/help">help</a></li>
+            <li><a href="/weather">weather</a></li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    {{>header}}
+
+    <div class="website-container">
+        <h1>Enter the location and get the weather!</h1>
+        <form class="form">
+            <input type="text" placeholder="Location">
+            <button type="submit">submit</button>
+        </form>
+        <div class="response">
+            <p class="message-1"></p>
+            <p class="message-2"></p>
+            <img class="status-img">
+            <p class="some-info"></p>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/js/logic.js"></script>
+</body>
+
+</html>
