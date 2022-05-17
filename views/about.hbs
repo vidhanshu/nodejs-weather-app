@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-        <link rel="stylesheet" href="css/style.css">
+    <title>About</title>
+    <link rel="icon" href="https://www.freeiconspng.com/uploads/info-icon-8.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     {{>header}}
-    <div class="website-container" >
+    <div class="website-container">
         <h1>{{title}}</h1>
-        <p>created by - {{name}}</p>
-        you can see my portfolio  
-        <a href="{{portfolio}}">here</a>
+        <p>This site is created using mapbox and wetherstack api by {{name}}</p>
+        <img class="demo" src="https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif">
+        <p class="title">
+            you can see my portfolio
+            <a href="{{portfolio}}">here</a>
+        </p>
     </div>
     {{>footer}}
 </body>
