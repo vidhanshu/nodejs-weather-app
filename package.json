@@ -4,16 +4,19 @@
   "description": "web server creation",
   "main": "index.js",
   "scripts": {
-    "start":"node src/app.js"
+    "start": "node src/app.js",
+    "dev":"node src/app.js"
   },
   "author": "vidhanshu",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
     "hbs": "^4.2.0",
-    "nodemon": "^2.0.16",
     "request": "^2.88.2",
     "to": "^0.2.9",
     "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
