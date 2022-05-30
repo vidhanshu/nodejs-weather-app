@@ -47,10 +47,11 @@ app.get("/help", (req, res) => {
     })
 })
 
+
 app.get("/weather", (req, res) => {
     if (!req.query.address) {
         return res.render('weather', {
-            temp: "23degC",
+            temp: '23deg',
             title: "Weather page for weather app",
             name: "vidhanshu",
             data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()

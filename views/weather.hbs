@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
-     <link rel="icon"
+    <link rel="icon"
         href="https://th.bing.com/th/id/R.770b805d5c99c7931366c2e84e88f251?rik=khgO%2bY1Hh3BT9w&riu=http%3a%2f%2fpurepng.com%2fpublic%2fuploads%2flarge%2fpurepng.com-weather-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596142qx4ep.png&ehk=6msbAydV7X6D4bO8zvLC664aXwKOdBU17dwrHcKxaAg%3d&risl=&pid=ImgRaw&r=0">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,6 +15,7 @@
     {{>header}}
 
     <div class="website-container">
+        <h1 id="temperature"></h1>
         <h1>{{title}}</h1>
         <p>using our API you can get complete weather info just do the following changes in the above url in url bar</p>
         <p class="title">/weather?address=provide-address-here</p>
@@ -26,6 +27,15 @@
     </div>
 
     {{>footer}}
+
+    <script>
+        navigator.geolocation.getCurrentPosition(async (pos) => {
+            const { latitude, longitude } = pos.coords;
+            const res = await fetch(`/weather?address=${latitude},${longitude}`)
+            const forecastObj = await res.json();
+            document.querySelector("#temperature").innerHTML = forecastObj.current.temperature + "°C " + forecastObj.location.name
+        })
+    </script>
 </body>
 
 </html>
