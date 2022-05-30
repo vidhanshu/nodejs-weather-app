@@ -24,7 +24,8 @@ app.use(express.static(publicDirectoryPath));
 //all routes are defined here
 app.get("/", (req, res) => {
     res.render('index', {
-        name: "vidhanshu",
+        name: "Vidhanshu",
+        tutor_name: "Andrew mead",
         title: "Home page for weather app",
         data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
     res.render('about', {
         name: "vidhanshu",
+        tutor_name: "Andrew mead",
         title: "About page for weather app",
         portfolio: "https://vidhanshu-portfolio.vercel.app/",
         data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
@@ -42,6 +44,7 @@ app.get("/about", (req, res) => {
 app.get("/help", (req, res) => {
     res.render("help", {
         message: "Help page for weather app",
+        tutor_name: "Andrew mead",
         name: "vidhanshu",
         data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
@@ -54,6 +57,7 @@ app.get("/weather", (req, res) => {
             temp: '23deg',
             title: "Weather page for weather app",
             name: "vidhanshu",
+            tutor_name: "Andrew mead",
             data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
         })
     }
@@ -74,6 +78,7 @@ app.get("/help/*", (req, res) => {
     res.render('404', {
         message: "Article not found",
         name: "vidhanshu",
+        tutor_name: "Andrew mead",
         data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })
