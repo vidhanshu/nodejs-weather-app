@@ -23,6 +23,10 @@ form.addEventListener('submit', (evt) => {
     evt.preventDefault();
     /* reset all values */
     const value = evt.target.children[0].value;
+    if(!value){
+        return alert("Please provide valid address!");
+    }
+
     messageOne.innerHTML = "Loading...";
     messageTwo.innerHTML = "";
     statusImg.src = './img/loading.gif';

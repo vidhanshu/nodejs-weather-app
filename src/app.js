@@ -41,11 +41,20 @@ app.get("/about", (req, res) => {
     })
 })
 
+app.get("/wrm", (req, res) => {
+    res.render('wrm', {
+        name: "vidhanshu",
+        tutor_name: "Andrew mead",
+        title: "About page for weather app",
+        portfolio: "https://vidhanshu-portfolio.vercel.app/",
+        data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
+    })
+})
+
 app.get("/help", (req, res) => {
     res.render("help", {
         message: "Help page for weather app",
-        tutor_name: "Andrew mead",
-        name: "vidhanshu",
+        name: "RainSense",
         data: (new Date()).getFullYear() - 1 + "-" + (new Date()).getFullYear()
     })
 })

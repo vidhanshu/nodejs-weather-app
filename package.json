@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev":"nodemon src/app.js js,hbs,css"
+    "dev": "nodemon src/app.js -e js,hbs,css"
   },
   "author": "vidhanshu",
   "license": "ISC",
@@ -14,7 +14,7 @@
     "hbs": "^4.2.0",
     "request": "^2.88.2",
     "to": "^0.2.9",
-    "update": "^0.7.4"
+    "update": "^0.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
